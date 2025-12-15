@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""":Mod: config
+
+:Synopsis:
+    GMN adapter configuration
+
+:Author:
+    servilla
+
+:Created:
+    20251214
+"""
+from pathlib import Path
+
+import daiquiri
+
+
+logger = daiquiri.getLogger(__name__)
+
+
+class Config:
+    def __init__(self):
+        pass
+
+    CWD = Path.cwd()
+    ROOT_DIR = CWD / ".." / ".."
+    QUEUE =  ROOT_DIR / "adapter_queue.sqlite"
