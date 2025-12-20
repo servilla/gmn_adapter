@@ -26,8 +26,8 @@ class Config:
         pass
 
     # Project paths
-    CWD = Path.cwd()
-    ROOT_DIR = CWD / ".." / ".."
+    CWD = Path(__file__).resolve().parent
+    ROOT_DIR = (CWD / ".." / "..").resolve()
 
     # Adapter Queue Sqlite Database
     QUEUE =  ROOT_DIR / "adapter_queue.sqlite"
